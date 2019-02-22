@@ -73,16 +73,17 @@ class Calculator:
 
     def setMemo(self, result):
         if (self.__MemoryPointer == 0):
-            self.M1 = result
+            self.M1 = str(result)
             CalcLog.write("Result is loaded into M1")
         elif(self.__MemoryPointer == 1):
-            self.M2 = result
+            self.M1 = str(result)
             CalcLog.write("Result is loaded into M2")
+
         elif(self.__MemoryPointer == 2):
-            self.M3 = result
+            self.M1 = str(result)
             CalcLog.write("Result is loaded into M3")
         else:
-            self.M4 = result
+            self.M1 = str(result)
             CalcLog.write("Result is loaded into M4")
 
         self.__MemoryPointer = (self.__MemoryPointer + 1) % 4
